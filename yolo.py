@@ -21,6 +21,16 @@ class Yolo:
     def predict(self):
         pass
 
+    def export(self):
+        pass
+
+    def evaluate(self):
+        pass
+
+    def validate(self):
+        pass
+
+
 
 # Instantiate the Yolo class
 yolo = Yolo(version=11, task='detect', size='nano')
