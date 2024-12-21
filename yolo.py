@@ -31,7 +31,6 @@ class Yolo:
         pass
 
 
-
 # Instantiate the Yolo class
 yolo = Yolo(version=11, task='detect', size='nano')
 yolo.get_info()
