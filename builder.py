@@ -12,13 +12,18 @@ class Builder:
                   'yolo 9': 'source-models/yolov9m.yaml',
                   'yolo 10': 'source-models/yolov10x.yaml', }
         self.model_path = models[model_name]
+        self.pt_path = self.model_path.replace('yaml', 'pt').split('/')[-1]
         self.model = YOLO(self.model_path)
 
     def info(self):
         return self.model.info()
 
     def train(self, dataset_path, epochs):
-        self.model.train(data=dataset_path, epochs=epochs)
+        self.model.train(data=dataset_path, epochs=epochs, device='mps')
+
+    def fine_tune(self, dataset_path, epochs):
+        self.model.load(self.pt_path)
+        self.model.train(data=dataset_path, epochs=epochs, device='mps')
 
     def validate(self, dataset_path=None):
         if dataset_path is None:
@@ -38,4 +43,5 @@ class Builder:
 
 
 model = Builder('yolo 10')
-model.info()
+model.train(dataset_path='datasets/coco8.yaml', epochs=100)
+model.validate()
