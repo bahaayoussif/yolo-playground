@@ -5,12 +5,12 @@ from PIL import Image
 
 class Builder:
     def __init__(self, model_name):
-        models = {'yolo 3': 'models/yolov3.yaml',
-                  'yolo 5': 'models/yolov5.yaml',
-                  'yolo 6': 'models/yolov6.yaml',
-                  'yolo 8': 'models/yolov8.yaml',
-                  'yolo 9': 'models/yolov9m.yaml',
-                  'yolo 10': 'models/yolov10x.yaml', }
+        models = {'yolo 3': 'source-models/yolov3.yaml',
+                  'yolo 5': 'source-models/yolov5.yaml',
+                  'yolo 6': 'source-models/yolov6.yaml',
+                  'yolo 8': 'source-models/yolov8.yaml',
+                  'yolo 9': 'source-models/yolov9m.yaml',
+                  'yolo 10': 'source-models/yolov10x.yaml', }
         self.model_path = models[model_name]
         self.model = YOLO(self.model_path)
 
