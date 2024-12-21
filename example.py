@@ -1,3 +1,3 @@
-from config import YOLO
+from ultralytics import YOLO
 
-print(YOLO)
+

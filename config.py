@@ -125,6 +125,6 @@ YOLOV5 = {
     }
 }
 
-YOLO = {'11': YOLOV11, '10': YOLOV10,
-        '9': YOLOV9, '8': YOLOV8,
-        '6': YOLOV6, '5': YOLOV5, }
+YOLO_MODELS = {11: YOLOV11, 10: YOLOV10,
+        9: YOLOV9, 8: YOLOV8,
+        6: YOLOV6, 5: YOLOV5, }
