@@ -35,8 +35,8 @@ class Yolo:
     def predict(self):
         pass
 
-    def export(self, format):
-        self.model.export(format=format)
+    def export(self, file_format):
+        self.model.export(format=file_format)
 
     def evaluate(self):
         pass
@@ -61,4 +61,4 @@ class Yolo:
 yolo = Yolo(version=11, task='detect', size='xlarge')
 yolo.get_info()
 yolo.train(dataset='coco8', epochs=100)
-yolo.export(format='coreml')
+yolo.export(file_format='coreml')
