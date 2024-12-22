@@ -140,6 +140,6 @@ COCO8 = {
     'pose': {'coco8': 'coco8-pose.yaml'}
 }
 DATASETS = {
-    'coco': COCO,
+    'coco': COCO,  # we need to fix it
     'coco8': COCO8,
-            }
+}
