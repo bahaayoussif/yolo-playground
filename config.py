@@ -126,5 +126,20 @@ YOLOV5 = {
 }
 
 YOLO_MODELS = {11: YOLOV11, 10: YOLOV10,
-        9: YOLOV9, 8: YOLOV8,
-        6: YOLOV6, 5: YOLOV5, }
+               9: YOLOV9, 8: YOLOV8,
+               6: YOLOV6, 5: YOLOV5, }
+
+COCO = {
+    'detect': {'coco': 'coco.yaml'},
+    'segmentation': {'coco': 'coco.yaml'},
+    'pose': {'coco': 'coco-pose.yaml'}
+}
+COCO8 = {
+    'detect': {'coco8': 'coco8.yaml'},
+    'segmentation': {'coco8': 'coco8-seg.yaml'},
+    'pose': {'coco8': 'coco8-pose.yaml'}
+}
+DATASETS = {
+    'coco': COCO,
+    'coco8': COCO8,
+            }
